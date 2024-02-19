@@ -558,3 +558,70 @@
   558  ls
   559  mv Work/* .\n
   560  ls
+  561  history > history.txt
+  562  ls
+  563  cd Task_4
+  564  ls
+  565  ./task4.o
+  566  nvim task4.cpp
+  567  cd Task_4
+  568  g++ task4.cpp -o task4 && ./task4
+  569  ls
+  570  clear
+  571  nvim .
+  572  cd ..
+  573  nvim .
+  574  git status
+  575  git add -A
+  576  git commit -m "clearing old iteration"
+  577  git push
+  578  git status
+  579  nvim .
+  580  git restore .
+  581  ./Task_4/task4
+  582  cd Task_4
+  583  task4.o
+  584  task4
+  585  ls
+  586  task4
+  587  ./task4
+  588  ./Task_4/task4
+  589  cd Task_3
+  590  zsh finalexperiment.sh
+  591  cd ../Task_2
+  592  g++ test.cpp -o test.o && ./test.o
+  593  nvim .
+  594  g++ test.cpp -o test.o && ./test.o
+  595  cd Task_4
+  596  cd ..
+  597  cd Task_2
+  598  g++ test.cpp -o test.o && ./test.o
+  599  clear
+  600  cd .
+  601  cd ..
+  602  cd Task_1
+  603  ls
+  604  zsh tailprogram.sh
+  605  man watch
+  606  watch -n 5 tail /etc/passwd
+  607  clear
+  608  nslookup github.com
+  609  nslookup example.com
+  610  man nslookup
+  611  clear
+  612  nslookup example.com
+  613  nslookup google.com
+  614  git status
+  615  git add -A 
+  616  git commit -m "clearing old iteration"
+  617  git config --global user.name "matthewloh"
+  618  git config --global user.email "matthewloh256@gmail.com"
+  619  git commit --amend --reset-author
+  620  git status
+  621  git push
+  622  git status
+  623  clear
+  624  nslookup google.com
+  625  nslookup example.com
+  626  cd ..
+  627  ls
