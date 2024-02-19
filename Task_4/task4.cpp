@@ -28,7 +28,7 @@ void simRoundRobin(vector<Process> &processes, int time_quantum) {
     ready_queue.push(p);
   }
 
-  int curr_time = 0;
+  int time_elapsed = 0;
 
   while (!ready_queue.empty()) {
     Process curr_process = ready_queue.front();
@@ -41,9 +41,9 @@ void simRoundRobin(vector<Process> &processes, int time_quantum) {
 
     int executed_cycles = min(time_quantum, curr_process.remaining_cycles);
     curr_process.remaining_cycles -= executed_cycles; // Simulation of execution
-    curr_time += executed_cycles;
+    time_elapsed += executed_cycles;
 
-    cout << "Time Elapsed: " << curr_time
+    cout << "Time Elapsed: " << time_elapsed
          << ", Current Process: " << curr_process.name
          << ", Remaining CPU Cycles: " << curr_process.remaining_cycles << endl;
 
