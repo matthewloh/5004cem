@@ -1,0 +1,560 @@
+    1  clear
+    2  chsh -s /usr/bin/zsh
+    3  echo $0
+    4  echo $SHELL
+    5  sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    6  sudo apt-get install git
+    7  sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    8  sudo apt-get install fonts-powerline
+    9  unzip ~/Downloads/JetBrainsMono.zip -d ~/.fonts
+   10  fc-cache -fv
+   11  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+   12  vim ~/.zshrc
+   13  exec zsh
+   14  
+   15  clear
+   16  exec zsh
+   17  clear
+   18  sudo apt-get install dconf-cli
+   19  git clone https://github.com/dracula/gnome-terminal\ncd gnome-terminal
+   20  ./install.sh
+   21  sudo apt-get install curl
+   22  git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions 
+   23  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+   24  vim ~/.zshrc
+   25  exec zsh
+   26  clear
+   27  cd ~
+   28  echo $0
+   29  echo $SHELL
+   30  logout
+   31  login matthew
+   32  su root
+   33  clear
+   34  pip --version
+   35  clear
+   36  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage\nchmod u+x nvim.appimage\n./nvim.appimage
+   37  mkdir -p /opt/nvim\nmv nvim.appimage /opt/nvim/nvim
+   38  ./nvim.appimage --appimage-extract\n./squashfs-root/AppRun --version\n\n# Optional: exposing nvim globally.\nsudo mv squashfs-root /\nsudo ln -s /squashfs-root/AppRun /usr/bin/nvim\nnvim
+   39  clear
+   40  mkdir -p /opt/nvim\nmv nvim.appimage /opt/nvim/nvim
+   41  sudo mkdir -p /opt/nvim 
+   42  mv nvim.appimage /opt/nvim/nvim
+   43  sudo mv nvim.appimage /opt/nvim/nvim
+   44  export PATH="$PATH:/opt/nvim/" 
+   45  nvim
+   46  ./nvim.appimage --appimage-extract\n./squashfs-root/AppRun --version\n\n# Optional: exposing nvim globally.\nsudo mv squashfs-root /\nsudo ln -s /squashfs-root/AppRun /usr/bin/nvim\nnvim
+   47  clear
+   48  # required\nmv ~/.config/nvim{,.bak}\n\n# optional but recommended\nmv ~/.local/share/nvim{,.bak}\nmv ~/.local/state/nvim{,.bak}\nmv ~/.cache/nvim{,.bak}
+   49  git clone https://github.com/LazyVim/starter ~/.config/nvim
+   50  rm -rf ~/.config/nvim/.git
+   51  nvim\n
+   52  sudo apt-get install ripgrep
+   53  sudo apt install fd-find
+   54  sudo apt install lazygit
+   55  LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')\ncurl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"\ntar xf lazygit.tar.gz lazygit\nsudo install lazygit /usr/local/bin
+   56  lazygit --version
+   57  pip list
+   58  python --version
+   59  sudo apt install -y python3-venv
+   60  sudo apt install -y python3-pip
+   61  sudo apt-get update
+   62  clear
+   63  nvim .
+   64  sudo apt-get nodjs
+   65  sudo apt-get install nodejs
+   66  ls
+   67  lazygit 
+   68  clear
+   69  mkdir Work
+   70  cd Work
+   71  nvim . 
+   72  pip --version
+   73  python 
+   74  python3 -m venv env
+   75  clear
+   76  nvim .
+   77  nvim helloworld.py
+   78  ls
+   79  ls -lah
+   80  nvim helloworld.py
+   81  pip install wikipedia
+   82  nvim helloworld.py
+   83  clear
+   84  ls -lath
+   85  ls ~/.config
+   86  cd ~/Downloads
+   87  ls -lath
+   88  cat the-count-of-monte-cristo.txt
+   89  clear
+   90  tail the-count-of-monte-cristo.txt
+   91  mv the-count-of-monte-cristo.txt ~/Work
+   92  cd ~/Work
+   93  ls -lath
+   94  ln -s the-count-of-monte-cristo.txt symlinked-book.txt
+   95  ls
+   96  cat symlinked-book.txt
+   97  clear
+   98  wc symlinked-book.txt
+   99  wc symlinked-book.txt -l
+  100  wc symlinked-book.txt -w
+  101  wc symlinked-book.txt -c
+  102  less symlinked-book.txt
+  103  more symlinked-book.txt
+  104  ls --help
+  105  clear
+  106  man ls
+  107  sudo apt-get install tldr
+  108  clear
+  109  grep 'Sinbad' the-count-of-monte-cristo.txt
+  110  rg 'Sinbad' the-count-of-monte-cristo.txt
+  111  tldr rg
+  112  tldr ripgrep
+  113  clear
+  114  man rg
+  115  fd helloworld.py
+  116  fd 
+  117  fd-find
+  118  fd
+  119  find
+  120  clear
+  121  fd-find
+  122  ln -s $(which fdfind) ~/.local/bin/fd
+  123  fdfind
+  124  clear
+  125  rg 'Sinbad' the-count-of-monte-cristo.txt
+  126  rg 'Sinbad' the-count-of-monte-cristo.txt | wc
+  127  fdfind
+  128  fd
+  129  echo $PATH
+  130  clear
+  131  man awk
+  132  head the-count-of-monte-cristo.txt
+  133  man tail
+  134  echo 'hello, world!' | sed 's/world/universe/'
+  135  man du
+  136  ls | xargs du -sh
+  137  man xargs
+  138  man man
+  139  man zsh
+  140  clear
+  141  man grep
+  142  echo "my current user is: $(whoami)"
+  143  echo "my current user is: $(whoami)" > test.txt
+  144  nvim test.txt
+  145  echo "my current user is: $(whoami)" >> test.txt
+  146  nvim test.txt
+  147  fzf
+  148  sudo apt-get install fzf
+  149  fzf
+  150  compgen -c |\nwc
+  151  echo "Number of commands $(compgen -c | wc -c)"
+  152  compgen -c
+  153  clear
+  154  man compgen
+  155  compgen -h
+  156  compgen -help
+  157  compgen -c | less
+  158  man xcalc
+  159  xcalc
+  160  clear
+  161  compgen -c | fzf | xargs man
+  162  nvim ~/.zshrc
+  163  exec zsh
+  164  fman
+  165  nvim ~/.zshrc
+  166  exec zsh
+  167  clear
+  168  fman
+  169  zshconfig
+  170  exec zsh
+  171  zshconf
+  172  history
+  173  history > history.txt
+  174  nvim history.txt
+  175  history >> history.txt
+  176  nvim history.txt
+  177  clear
+  178  cd Work
+  179  ls -lath
+  180  cat 5004CEMPortfolioJan24_Q.pdf
+  181  clear
+  182  cd Work
+  183  cat the-count-of-monte-cristo.txt 
+  184  cat the-count-of-monte-cristo.txt | grep 'Sinbad' | wc - l
+  185  cat the-count-of-monte-cristo.txt | grep 'Sinbad' | wc -l
+  186  cat the-count-of-monte-cristo.txt | rg 'Sinbad' 
+  187  cat the-count-of-monte-cristo.txt | rg 'Sinbad' | wc -w
+  188  cat the-count-of-monte-cristo.txt | wc -w "Sinbad"
+  189  man wc
+  190  clear
+  191  cat the-count-of-monte-cristo.txt | wc -w
+  192  cat the-count-of-monte-cristo.txt | grep 'Sinbad'
+  193  awk '{ count += gsub(/Sinbad/, ""); } END { print count; }' the-count-of-monte-cristo.txt\n
+  194  clear
+  195  awk '{ count += gsub(/Sinbad/, ""); } END { print count; }' the-count-of-monte-cristo.txt\n
+  196  cat the-count-of-monte-cristo.txt | rg 'Sinbad'
+  197  cat the-count-of-monte-cristo.txt | rg 'Sinbad' | wc -l
+  198  sudo apt-get install nettools
+  199  sudo apt-get upgrade
+  200  sudo apt update
+  201  sudo killall apt apt-get
+  202  sudo apt-get upgrade
+  203  sudo reboot
+  204  sudo apt-get upgrade
+  205  clear
+  206  sudo apt update
+  207  sudo apt upgrade
+  208  clear
+  209  cd Work
+  210  ls
+  211  cat helloworld.py
+  212  py helloworld.py
+  213  zshconf
+  214  python
+  215  python3
+  216  zshconf
+  217  nvim ~/.config/nvim/lua
+  218  sudo apt upgrade nodejs
+  219  n latest
+  220  node -v
+  221  n latest
+  222  npm install -g n
+  223  node
+  224  npm 
+  225  which npm
+  226  which nodejs
+  227  sudo apt install nodejs
+  228  clear
+  229  sudo apt install nodejs
+  230  sudo apt purge nodejs npm
+  231  sudo apt autoremove
+  232  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+  233  nvm install node
+  234  wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+  235  nvm
+  236  export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"\n[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+  237  nvm
+  238  clear
+  239  nvm install node
+  240  nvm install node\nnvm alias default node
+  241  nvim .
+  242  man nvm
+  243  tldr man
+  244  tldr nvm
+  245  nvm -h
+  246  nvm -h | less
+  247  clear
+  248  man tail
+  249  sudo apt get nettools
+  250  sudo apt-get install nettools
+  251  sudo apt-get install net-tools
+  252  clear
+  253  ifconfig
+  254  man ifconfig
+  255  man tail
+  256  tail /etc/passwd -f
+  257  man tail
+  258  date
+  259  man date
+  260  mkdir Task_1
+  261  cd Task_1
+  262  nvim .
+  263  zsh tailprogram.sh
+  264  nvim .
+  265  nvim ~/.config/nvim
+  266  xclip
+  267  nvim . 
+  268  sudo apt-get install -y xclip
+  269  xclip
+  270  man xclip
+  271  nvim . 
+  272  zsh tailprogram.sh
+  273  ls
+  274  ls -lah
+  275  nvim .zsh_history
+  276  ls
+  277  clear
+  278  exec zsh
+  279  celar
+  280  clear
+  281  exec zsh
+  282  ls
+  283  ls -lah
+  284  cd Work
+  285  clear
+  286  ls
+  287  nvim .
+  288  nvimconf
+  289  zshconf
+  290  nvimconf
+  291  exec zsh
+  292  nvimconf
+  293  nvim
+  294  nvim .
+  295  nvimconf
+  296  clear
+  297  exit
+  298  nvim .
+  299  cd Task_2
+  300  g++ task2.cpp -o task2.o && ./task2.o
+  301  xit
+  302  exit
+  303  g++ Task_2/task2.cpp -o task2.o && ./task2.o
+  304  ls
+  305  rm task2.o
+  306  g++ Task_2/task2.cpp -o Task_2/task2.o && Task_2/task2.o
+  307  exit
+  308  cd Task_2
+  309  nvim .
+  310  exit
+  311  nvim .
+  312  nvimconf
+  313  find / -type f -iname "clangd.lua"
+  314  sudo find / -type f -iname "clangd.lua"
+  315  sudo nvim /home/matthew/.local/share/nvim/lazy/LazyVim/lua/lazyvim/plugins/extras/lang/clangd.lua\n
+  316  nvim task2.cpp
+  317  sudo nvim /home/matthew/.local/share/nvim/lazy/LazyVim/lua/lazyvim/plugins/extras/lang/clangd.lua\n
+  318  clear
+  319  nvim task2.cpp
+  320  nvim .
+  321  nvim task2.cpp
+  322  exit
+  323  nvim task2.cpp
+  324  nvim .
+  325  exit
+  326  nvim .
+  327  nvim 
+  328  nvim .
+  329  g++ Task_2/task2.cpp -o Task_2/task2.o && Task_2/task2.o
+  330  g++ task2.cpp -o task2.o && ./task2.o
+  331  man fd
+  332  sudo fd / -type f -iname "clangd.lua"
+  333  fdfind
+  334  sudo fdfind / -type f -iname "clangd.lua"
+  335  man fdfind
+  336  nvim .
+  337  nvim
+  338  g++ task2.cpp -o task2.o && ./task2.o
+  339  cd Work
+  340  cd Task_
+  341  cd Task_2
+  342  nvi m.
+  343  clear
+  344  nvim .
+  345  g++ multimatrixthreaded.cpp -o multimatrixthreaded.o && ./multimatrixthreaded.o
+  346  ls
+  347  g++ multimatrixthreaded.cpp -o multimatrixthreaded.o
+  348  g++ ./multimatrixthreaded.cpp -o multimatrixthreaded.o
+  349  clear
+  350  ls
+  351  g++ multimatrixthreaded.cpp
+  352  g++ multimatrixthreaded.cpp -o multimatrixthreaded.o && ./multimatrixthreaded.o
+  353  g++ test.cpp -o test.o && ./test.o
+  354  nvimco
+  355  nvimconf
+  356  clear
+  357  nvimconf
+  358  nvim .
+  359  nvimconf
+  360  nvim .
+  361  nvimcon
+  362  nvimconf
+  363  nvim .
+  364  g++ task2.cpp -o task2.o && ./task2.o
+  365  nvim ..
+  366  man objdump
+  367  man objdump | bat
+  368  sudo apt-get install -y bat
+  369  man objdump | bat
+  370  bat
+  371  sudo apt remove bat
+  372  sudo apt-get install -y bat
+  373  mkdir -p ~/.local/bin\nln -s /usr/bin/batcat ~/.local/bin/bat
+  374  bat
+  375  batcat
+  376  sudo apt-get install -y batcat
+  377  man objdump | batcat
+  378  bat
+  379  mkdir -p ~/.local/bin\nln -s /usr/bin/batcat ~/.local/bin/bat
+  380  bat
+  381  sudo find / -type f -iname "bat"
+  382  ls usr/bin/bat
+  383  ls ~/.local/bin/bat
+  384  ls ~/.local/bin/bat -lah
+  385  bat
+  386  batcat
+  387  batcat multimatrixthreaded.cpp
+  388  cd ../Task_3
+  389  ls
+  390  nvim .
+  391  mkdir -p ~/.local/bin\nln -s /usr/bin/batcat ~/.local/bin/bat
+  392  bat
+  393  sudo ln -s /usr/bin/batcat /usr/local/bin/bat
+  394  bat
+  395  man objdump | batcat
+  396  man objdump | bat
+  397  cd ./Task_3
+  398  cd ./Work/Task_3
+  399  nvim .
+  400  g++ task3.cpp -o task3.o && ./task3.o
+  401  g++ task3thread.cpp -o task3thread.o && ./task3thread.o
+  402  bat ps
+  403  cat ps
+  404  man ps
+  405  man ps | bat
+  406  ps
+  407  ps -aux
+  408  ps -aux | less
+  409  ps -aux | cat
+  410  ps -aux | bat
+  411  man bat
+  412  bat bat
+  413  clear
+  414  man nslookup
+  415  nslookup google.com
+  416  nslookup newinti.edu.my
+  417  nslookup os-5004cem-coventry.ac.uk
+  418  nslookup youtube.com
+  419  ipconfig
+  420  ifconfig
+  421  nvim .
+  422  fork
+  423  man fork
+  424  man clone
+  425  man fork
+  426  man clone
+  427  man fork
+  428  man fork | bat
+  429  man fork
+  430  man clone
+  431  nvim .
+  432  man fork
+  433  g++ task3thread.cpp -o task3thread.o && ./task3thread.o
+  434  g++ task3fork.cpp -o task3fork.o && ./task3fork.o
+  435  nvimconf
+  436  nvim .
+  437  nvimconf
+  438  nvim .
+  439  nvimconf
+  440  nvim .
+  441  nvimconf
+  442  g++ task3fork.cpp -o task3fork.o && ./task3fork.o
+  443  cd ..
+  444  grep -oE '\w+' ./the-count-of-monte-cristo.txt | sort | uniq -c\n
+  445  grep -oE '\w+' ./the-count-of-monte-cristo.txt | sort | uniq -c | bat\n
+  446  grep "Sinbad" the-count-of-monte-cristo.txt | wc -l
+  447  grep "Sinbad" the-count-of-monte-cristo.txt | wc 
+  448  clear
+  449  nvim .
+  450  cd Task_4
+  451  g++ task4.cpp -o task4 ./task4
+  452  g++ task4.cpp -o task4 && ./task4
+  453  bat < g++ task4.cpp -o task4 && ./task4 
+  454  g++ task4.cpp -o task4 && bat < ./task4 
+  455  g++ task4.cpp -o task4 && cat ./task4 
+  456  g++ task4.cpp -o task4 &&./task4 
+  457  ./task4 | cat
+  458  ./task4 | bat
+  459  g++ task4.cpp -o task4 &&./task4 
+  460  g++ task4.cpp -o task4 && ./task4 | less
+  461  cd Task_4
+  462  g++ task4.cpp -o task4 && ./task4 | less
+  463  g++ task4.cpp -o task4 && ./task4 
+  464  g++ task4.cpp -o task4 && ./task4
+  465  g++ task4.cpp -o task4 && ./task4 
+  466  g++ task4.cpp -o task4 && ./task4 20
+  467  g++ task4.cpp -o task4 && ./task4
+  468  nvim .
+  469  cd Task_2
+  470  g++ task2.cpp -o task2.o && ./task2.o
+  471  g++ task4.cpp -o task4 && ./task4
+  472  nvim .
+  473  cd ..
+  474  cd Task_2
+  475  g++ multimatrixthreaded.cpp -o multimatrixthreaded.o && ./multimatrixthreaded.o
+  476  nvim .
+  477  cd ..
+  478  nvim .
+  479  cd Task_1
+  480  zsh tailprogram.sh
+  481  cd ..
+  482  cd Task_2
+  483  g++ multimatrixthreaded.cpp -o multimatrixthreaded.o && ./multimatrixthreaded.o
+  484  g++ task2.cpp -o task2.o && ./task2.o
+  485  cd ..
+  486  cd Task_3
+  487  g++ fork.cpp -o fork && ./fork
+  488  g++ task3thread.cpp -o task3thread.o && ./task3thread.o
+  489  OA
+  490  g++ task3thread.cpp -o task3thread.o && ./task3thread.o
+  491  OA
+  492  g++ task3thread.cpp -o task3thread.o && ./task3thread.o
+  493  g++ task3fork2_.cpp -o task3fork2 && ./task3fork2
+  494  g++ task3thread.cpp -o task3thread.o && ./task3thread.o
+  495  g++ task3fork2_.cpp -o task3fork2 && ./task3fork2
+  496  g++ task3fork2_.cpp -o task3fork2.o && ./task3fork2
+  497  g++ task3fork2_.cpp -o task3fork2.o && ./task3fork2.o
+  498  g++ task3thread.cpp -o task3thread.o && ./task3thread.o
+  499  g++ task3fork2_.cpp -o task3fork2.o && ./task3fork2.o
+  500  g++ task3thread.cpp -o task3thread.o && ./task3thread.o
+  501  g++ task3fork2_.cpp -o task3fork2.o && ./task3fork2.o
+  502  cd Task_3
+  503  zsh experiment.sh
+  504  nvim experiment.sh
+  505  zsh experiment.sh
+  506  nvim experiment.sh
+  507  zsh experiment.sh
+  508  zsh experiment2.sh
+  509  zsh experiment.sh
+  510  zsh experiment.sh experiment2.sh
+  511  zsh experiment.sh
+  512  zsh experiment2.sh
+  513  zsh finalexperiment.sh
+  514  cd ..
+  515  cd Task_2
+  516  ls
+  517  g++ task2.cpp -o task2.o && ./task2.o
+  518  cd Task_2
+  519  g++ task2.cpp -o task2.o && ./task2.o
+  520  nvim .
+  521  cd Task_2
+  522  g++ multimatrixthreaded.cpp -o multimatrixthreaded.o && ./multimatrixthreaded.o
+  523  clear
+  524  cd ../Task_3
+  525  zsh finalexperiment.sh
+  526  :sp
+  527  exit
+  528  ls
+  529  clear
+  530  ls
+  531  clear
+  532  sudo shutdown
+  533  sudo shutdown -c
+  534  sudo shutdown -now
+  535  sudo shutdown now
+  536  cd Work
+  537  ls
+  538  cd Task_3
+  539  ls
+  540  zsh finalexperiment.sh
+  541  sudo shutdown now
+  542  git clone https://github.com/matthewloh/5004cem.git
+  543  sudo dpkg -i cd Downloads/gcm-linux_amd64.2.4.1.tar.gz\ngit-credential-manager configure
+  544  sudo dpkg -i Downloads/gcm-linux_amd64.2.4.1.tar.gz\ngit-credential-manager configure
+  545  tar -xvf Downloads/gcm-linux_amd64.2.4.1.tar.gz -C /usr/local/bin\ngit-credential-manager configure
+  546  sudo tar -xvf Downloads/gcm-linux_amd64.2.4.1.tar.gz -C /usr/local/bin\ngit-credential-manager configure
+  547  cd 5004cem
+  548  git status
+  549  git pull
+  550  export GCM_CREDENTIAL_STORE=cache\n# or\ngit config --global credential.credentialStore cache
+  551  export GCM_CREDENTIAL_CACHE_OPTIONS="--timeout 7776000"\n# or\ngit config --global credential.cacheOptions "--timeout 7776000"
+  552  git status
+  553  git pull
+  554  clear
+  555  ls
+  556  cd ..
+  557  cd 5004cem
+  558  ls
+  559  mv Work/* .\n
+  560  ls

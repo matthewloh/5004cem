@@ -51,6 +51,14 @@ void simRoundRobin(vector<Process> &processes, int time_quantum) {
       ready_queue.push(curr_process); // Continue to the next cycle
       cout << "Process " << curr_process.name
            << " added back to the ready queue." << endl;
+      cout << "Ready queue: ";
+      queue<Process> temp = ready_queue;
+      while (!temp.empty()) {
+        cout << temp.front().name << " ";
+        temp.pop();
+      }
+      cout << endl << endl;
+
     } else {
       completed_processes.push_back(curr_process); // Add to completed processes
       cout << "Process " << curr_process.name << " completed. \n" << endl;
