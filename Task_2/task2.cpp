@@ -28,6 +28,8 @@ void multiply(const vector<vector<int>> &MAT_A,
         sum += MAT_A[i][k] * MAT_B[k][j];
       }
       result[i][j] = sum;
+      cout << "Thread ID: " << this_thread::get_id() << " calculated element ("
+           << i << " , " << j << ") : " << sum << endl;
     }
   }
 }
