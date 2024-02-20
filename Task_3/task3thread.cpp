@@ -45,25 +45,6 @@ int main() {
   cout << "The sum of the numbers is: " << addResult << endl;
   cout << "The difference of the numbers is: " << subtractResult << endl;
 
-  /* int addResultChild = 0; */
-  /* int subtractResultChild = 0; */
-
-  /* pid_t pid = fork(); */
-  /* cout << "Process id = " << pid << "\n "; */
-  /* if (pid == 0) { */
-  /*   addNumbers(numbers, 0, 100, addResultChild); */
-  /*   exit(0); */
-  /* } else { */
-  /*   wait(NULL); */
-  /*   subtractNumbers(numbers, 0, 100, subtractResultChild); */
-  /* } */
-  /**/
-  /* cout << "The sum of the numbers using child process is: " << addResultChild
-   */
-  /*      << endl; */
-  /* cout << "The difference of the numbers using child process is: " */
-  /*      << subtractResultChild << endl; */
-  /**/
   auto end = chrono::steady_clock::now();
   auto duration = end - start;
   cout << "Time taken: "

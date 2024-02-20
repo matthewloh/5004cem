@@ -34,39 +34,34 @@ int main() {
 
   auto start = chrono::steady_clock::now();
 
-  /* int addResult = 0; */
-  /* int subtractResult = 0; */
-  /**/
-  /* thread addThread(addNumbers, ref(numbers), 0, 100, ref(addResult)); */
-  /* thread subtractThread(subtractNumbers, ref(numbers), 0, 100, */
-  /*                       ref(subtractResult)); */
-  /**/
-  /* addThread.join(); */
-  /* subtractThread.join(); */
-  /**/
-  /* cout << "The sum of the numbers is: " << addResult << endl; */
-  /* cout << "The difference of the numbers is: " << subtractResult << endl; */
-
   int addResultChild = 0;
   int subtractResultChild = 0;
 
   pid_t pid = fork();
 
-  cout << "Process id = " << pid << "\n ";
+  cout << "Process id = " << pid << "\n";
 
   if (pid == 0) {
-    addNumbers(numbers, 0, 100, addResultChild);
+    /* This is executed by the child process
+     * */
+    cout << "Child process\n";
+    for (int i = 0; i < 100; i++) {
+      addResultChild += numbers[i];
+    }
+    cout << "The sum of the numbers is: " << addResultChild << endl;
+    /* addNumbers(numbers, 0, 100, addResultChild); */
     exit(0);
   } else {
+    /* This is executed by the parent process
+     * */
+    cout << "Parent process\n";
+    for (int i = 0; i < 100; i++) {
+      subtractResultChild -= numbers[i];
+    }
+    cout << "The difference of the numbers is: " << subtractResultChild << endl;
     wait(NULL);
-    subtractNumbers(numbers, 0, 100, subtractResultChild);
+    /* subtractNumbers(numbers, 0, 100, subtractResultChild); */
   }
-
-  cout << "The sum of the numbers using child process is: " << addResultChild
-       << endl;
-  cout << "The difference of the numbers using child process is: "
-       << subtractResultChild << endl;
-
   auto end = chrono::steady_clock::now();
   auto duration = end - start;
   cout << "Time taken: "
