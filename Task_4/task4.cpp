@@ -84,10 +84,21 @@ int main() {
   cin >> time_quantum;
 
   for (Process &proc : processes) {
-    if (proc.CPU_cycles < time_quantum) {
-      cout << "Time quantum cannot be larger than the largest CPU cycle."
+    int max = proc.CPU_cycles;
+    for (Process &p : processes) {
+      if (p.CPU_cycles > max) {
+        max = p.CPU_cycles;
+      }
+    }
+    if (time_quantum > max) {
+      cout << "Invalid time quantum value. Please enter a value less than or "
+              "equal to the largest CPU cycle."
            << endl;
-      return 1;
+      return 0;
+    } else if (time_quantum <= 1) {
+      cout << "Invalid time quantum value. Please enter a value greater than 1."
+           << endl;
+      return 0;
     }
   }
 

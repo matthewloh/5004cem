@@ -11,7 +11,8 @@
 using namespace std;
 
 // Function to generate random numbers for matrix initialization
-// Generating numbers between 0 and 9
+// Provided by cstdlib
+// Generating numbers between 0 and 9 for brevity
 
 int getRandomNumber() { return rand() % 10; }
 

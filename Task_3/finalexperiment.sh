@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # Function to compile and run a C++ program and capture the execution time
 run_program() {

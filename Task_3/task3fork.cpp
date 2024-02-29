@@ -8,6 +8,7 @@
 
 using namespace std;
 
+// Fork-based version
 int randomNum() { return rand() % 100; }
 
 // Function to add the numbers
@@ -49,7 +50,6 @@ int main() {
       addResultChild += numbers[i];
     }
     cout << "The sum of the numbers is: " << addResultChild << endl;
-    /* addNumbers(numbers, 0, 100, addResultChild); */
     exit(0);
   } else {
     /* This is executed by the parent process
@@ -60,7 +60,6 @@ int main() {
     }
     cout << "The difference of the numbers is: " << subtractResultChild << endl;
     wait(NULL);
-    /* subtractNumbers(numbers, 0, 100, subtractResultChild); */
   }
   auto end = chrono::steady_clock::now();
   auto duration = end - start;

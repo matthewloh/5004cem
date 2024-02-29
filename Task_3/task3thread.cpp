@@ -8,6 +8,7 @@
 
 using namespace std;
 
+// Threaded version
 int randomNum() { return rand() % 100; }
 
 // Function to add the numbers
@@ -27,11 +28,13 @@ void subtractNumbers(vector<int> &numbers, int start, int end, int &result) {
 int main() {
   vector<int> numbers(100);
   srand(time(0));
+
   for (int i = 0; i < 100; i++) {
     numbers[i] = randomNum();
   }
 
   auto start = chrono::steady_clock::now();
+
   int addResult = 0;
   int subtractResult = 0;
 
