@@ -48,7 +48,7 @@ by Alexandre Dumas [père]
 Contents
 
 
- VOLUME ONE
+VOLUME ONE
 Chapter 1. Marseilles—The Arrival
 Chapter 2. Father and Son
 Chapter 3. The Catalans
@@ -181,7 +181,7 @@ VOLUME ONE
 
 
 
- Chapter 1. Marseilles—The Arrival
+Chapter 1. Marseilles—The Arrival
 
 On the 24th of February, 1815, the look-out at Notre-Dame de la Garde
 signalled the three-master, the _Pharaon_ from Smyrna, Trieste, and
@@ -257,10 +257,6 @@ the owner.
 “And how did this misfortune occur?” inquired the latter, resuming the
 interrupted conversation.
 
-0023m
-
-
-
 “Alas, sir, in the most unexpected manner. After a long talk with the
 harbor-master, Captain Leclere left Naples greatly disturbed in mind.
 In twenty-four hours he was attacked by a fever, and died three days
@@ -324,10 +320,6 @@ instruction from anyone.”
 the captain’s breath out of his body when he assumed the command
 without consulting anyone, and he caused us to lose a day and a half at
 the Island of Elba, instead of making for Marseilles direct.”
-
-0025m
-
-
 
 “As to taking command of the vessel,” replied Morrel, “that was his
 duty as captain’s mate; as to losing a day and a half off the Island of
@@ -412,10 +404,6 @@ although if it were known that you had conveyed a packet to the
 marshal, and had conversed with the emperor, it might bring you into
 trouble.”
 
-0027m
-
-
-
 “How could that bring me into trouble, sir?” asked Dantès; “for I did
 not even know of what I was the bearer; and the emperor merely made
 such inquiries as he would of the first comer. But, pardon me, here are
@@ -481,9 +469,6 @@ gave them.”
 “I really must ask you to excuse me, M. Morrel. My first visit is due
 to my father, though I am not the less grateful for the honor you have
 done me.”
-
-0029m
-
 
 
 “Right, Dantès, quite right. I always knew you were a good son.”
@@ -635,7 +620,7 @@ movements of Edmond Dantès.
 
 
 
- Chapter 2. Father and Son
+Chapter 2. Father and Son
 
 We will leave Danglars struggling with the demon of hatred, and
 endeavoring to insinuate in the ear of the shipowner some evil
